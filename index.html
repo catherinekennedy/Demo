@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Engineering Notes Handwritten</title>
+	<style type="text/css">
+	#navbars{
+	background-color:#102B45;
+	color:white;
+	
+	}
+#cat{
+     background-color:white;
+	 border-radius:20px;
+	  }
+#imgsearch{
+      width:10px;
+      height:10px;
+}
+.jo{
+    text-align:center;
+	color:white;
+	
+	}
+#jo1{
+   color:#EFAD19;
+   
+   }
+.jo4{
+    margin:20px 100px;
+	}
+
+.abc{
+background-image:url(https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+	
+	}
+#searchin{
+   border-radius:20px;
+	border:none;
+	width:350px;
+	height:40px;
+	padding:10px;
+	 }
+.jo2{
+   width:200px;
+   height:100px;
+   
+  
+  }
+ .jo3{
+     text-align:center;}
+ .jo5{
+     width:200px;
+	 height:200px;}
+.jo6{	 
+	  margin-left:25px;
+	 }
+.jo7{
+    margin:30px 0 10px 40px;
+}	 
+.jo8{
+    background-color:#102B45;
+	color:white;
+	}
+.jo9{
+    margin:30px 0 120px 40px;
+}
+.jo10{
+   width:200px;
+   height:200px;
+   margin-left:200px;
+  
+}
+.jo11{
+
+   margin-left:450px;
+}
+#foote{
+background-color:black;
+color:white;
+width:100%;
+height:100%;
+text-decoration:none;
+
+}
+#foote a:hover{
+text-decoration:none;
+}
+#foote a{
+color:white;
+font-size:14px;
+}
+ 
+	</style>
+  </head>
+  <body>
+  
+    <nav class="navbar navbar-expand-lg navbar-default navbar-dark sticky-top  " id="navbars" >
+	<a class="navbar-brand " id="cat" href="#"><img src="https://lecturenotes.in/assets/img/logo.png"></a>
+  <a class="navbar-brand" href="#">LectureNotes</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active jo6">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+          
+ 
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Explore
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+       <li class="nav-item  " >
+        <a class="nav-link " href="#">Upload</a>
+		</li>
+		 <li class="nav-item ">
+        <a class="nav-link " href="#">Internship <span class="badge badge-secondary bg-warning">New</span></a>
+		</li>
+		
+		 <li class="nav-item  ">
+        <a class="nav-link" href="#">LCA<span class="badge badge-secondary bg-warning">New</span></a>
+		</li>
+		 <li class="nav-item ">
+        <a class="nav-link" href="#">Prime<span class="badge badge-secondary bg-warning">New</span></a>
+		</li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0 ">
+	
+	    <div class="input-group ">
+		<div class="input-group-append">
+          <div class="input-group-text">
+		  <a href="#"><img id="imgsearch" src="data:image/png;base64,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"></div>
+        </a>
+		</div>
+      
+		      <input class="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search">
+    
+		
+
+<button class="btn btn-warning my-2 my-sm-0 " type="submit">Register/login</button>
+    </form>
+  
+</nav>
+
+
+<div class="jumbotron abc">
+  <h1 class="jo">Get the best<span id="jo1" > LectureNotes<span></h1>
+ <input type="text" id="searchin" class="  mx-auto d-block" placeholder="Howdy,Search for your subject" >
+  <hr class="my-4">
+  <div class="row">
+  <div class="col">
+  <h1 class="jo" id="jo1">1M+</h1>
+  <h3 class="jo">ACTIVE STUDENTS<h3>
+  </div>
+  <div class="col">
+   <h1 class="jo" id="jo1">25000+</h1>
+  <h3 class="jo">TEACHERS<h3>
+   </div>
+  <div class="col">
+   <h1 class="jo" id="jo1">1000000+</h1>
+  <h3 class="jo">PAGES<h3>
+   </div>
+  <div class="col">
+   <h1 class="jo" id="jo1">100000+</h1>
+  <h3 class="jo">QUESTIONS<h3>
+  </div>
+  </div>
+  
+  <div id="carouselExampleControls" class="carousel slide rounded mx-auto d-block jo2" data-ride="carousel">
+  <div class="carousel-inner">
+ 
+    <div class="carousel-item active">
+      <img src="https://lecturenotes.in/assets/img/Home/institute/vtu.png" class="d-block w-100" alt="...">
+	</div>
+	
+    <div class="carousel-item">
+      <img src="https://lecturenotes.in/assets/img/Home/institute/anna.png" class="d-block w-100" alt="...">
+    </div>
+	
+    <div class="carousel-item">
+      <img src="https://lecturenotes.in/assets/img/Home/institute/jntu.png" class="d-block w-100" alt="...">
+    </div>
+	
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+  </div>
+  <h3 class="jo3">Select a Course</h3>
+  <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" id="engineering-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Engineering and Technology</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="placement-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Placement and more</a>
+  </li>
+  
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="engineering-tab">
+  
+  
+   <div class="row jo4">
+    <div class="col-sm">
+  <table class="table  table-hover">
+ 
+  <tbody>
+    <tr>
+      <th scope="row">></th>
+      <td>  Electrical Engineering</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">></th>
+      <td>Computer Science Engineering</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">></th>
+      <td >Electronics and Instrumentation Engineering</td>
+  
+    </tr>
+	<tr>
+      <th scope="row">></th>
+      <td >Information Technology Engineering</td>
+  
+    </tr>
+	<tr>
+      <th scope="row">></th>
+      <td >Electronics and Telecommunication Engineering</td>
+  
+    </tr>
+  </tbody>
+</table>
+</div> 
+    <div class="col-sm">
+	<table class="table  table-hover">
+ 
+  <tbody>
+    <tr>
+      <th scope="row">></th>
+      <td> Electrical and Electronics Engineering
+</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">></th>
+      <td>Chemical Engineering</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">></th>
+      <td >Civil Engineering</td>
+  
+    </tr>
+	<tr>
+      <th scope="row">></th>
+      <td >Mechanical Engineering</td>
+  
+    </tr>
+	<tr>
+      <th scope="row">></th>
+      <td >Master of Computer Application</td>
+  
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="placement-tab">
+  
+   <div class="row jo4">
+    <div class="col-sm">
+  <table class="table  table-hover">
+ 
+  <tbody>
+    <tr>
+      <th scope="row">></th>
+      <td>  Quantitative Aptitude</td>
+  </tr>
+    <tr>
+      <th scope="row">></th>
+      <td>Logical Reasoning</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">></th>
+      <td >Verbal Ability</td>
+  
+    </tr>
+	<tr>
+      <th scope="row">></th>
+      <td >Verbal Reasoning</td>
+    </tr>
+	
+  </tbody>
+</table>
+</div> 
+    <div class="col-sm">
+	<table class="table  table-hover">
+ 
+  <tbody>
+    <tr>
+      <th scope="row">></th>
+      <td> Latest Uploads</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">></th>
+      <td>Vedio Tutorials</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">></th>
+      <td >Questions set</td>
+  
+    </tr>
+	<tr>
+      <th scope="row">></th>
+      <td >Lab Manual</td>
+  
+    </tr>
+	
+  </tbody>
+</table>
+</div>
+</div>
+  
+  </div>
+</div>
+
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h2 class="jo3">What We Offer</h2>
+	<div class="row">
+	<div class="col-sm-3">
+	<div class="card" style="width: 16rem; height: 16rem">
+ <a href=""><img  src="https://lecturenotes.in/assets/img/Home/find_notes.png" class="card-img-top jo5 jo6" alt="...">
+    <h5 class="card-title jo3">University Notes</h5></a>
+  </div>
+</div>
+<div class="col-sm-3">
+  <div class="card" style="width: 16rem; height: 16rem; ">
+ <a href=""> <img src="https://lecturenotes.in/assets/img/Home/pyq_and_solution.png" class="card-img-top" alt="...">
+  <div class="card-body">
+   <h5 class="card-title jo3">Exam Questions & Solutions</h5>
+ </a> </div>
+</div>
+</div>
+<div class="col-sm-3">
+  <div class="card" style="width: 16rem; height: 16rem; ">
+  <a href=""><img src="https://lecturenotes.in/assets/img/Home/video_lecture.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title jo3">Video Lectures & Tutorials</h5>
+  </a></div>
+</div>
+</div>
+<div class="col-sm-3">
+  <div class="card" style="width: 16rem; height: 16rem; ">
+ <a href=""> <img src="https://lecturenotes.in/assets/img/Home/placement_preparation.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title jo3">Placement Preparation Contents</h5>
+ </a> </div>
+</div>
+  </div>
+  </div>
+  </div>
+</div>
+
+
+<div>
+<h3 class="jo3">How LectureNotes Help</h3>
+<div class="float-right jo7">
+<iframe width="540" class="float-right" height="304" src="https://www.youtube.com/embed/SVkXUGj4t_8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<ul class="text-wrap jo7">
+<li>Dictation kills classroom time, and conceptual discussion is non-existent these days.</li>
+<li>Teacher share their notes at LectureNotes teach freely in the classroom and discuss in the concept.</li>
+<li>Students can access the notes from different teachers, compare them and refer to the one that suits their requirements.</li>
+</ul>
+
+<button type="button " class="btn jo8 jo9">Upload</button>
+<button type="button" class="btn btn-warning jo9">Read Now</button>
+</div>
+
+
+
+
+<div class="jumbotron jumbotron-fluid jo8">
+  <div class="container">
+  	   <img class="float-right" src="https://lecturenotes.in/assets/img/Home/mobile.png">
+
+    <h2 class="">Download Our Android App</h2>
+
+    <p class="lead">Keep your favourite notes in your pocket and access it whenever you need, even without internet.</p>
+  <button type="button" class="btn btn-warning jo9">Download Now</button>
+  </div>
+</div>
+<h1 class="jo3 m-5">what they say</h1>
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+     
+	 <div class="mx-auto">
+<div class="row">
+<div class="col-md-4">
+      <img class="rounded  rounded-circle jo10"	  src="https://lecturenotes.in/uploads/avatars/5/55/5560fb093207afdea4fb59428b2c6cd3.jpg"class="d-block w-100" alt="...">
+      </div>
+	 <div class="col-md-4">
+
+	 <p class=" m-4 float-left text-wrap" style="width:32rem;">	
+	Both the faculties and young research-minded students save a lot of their valuable time for discussing the novel concepts in their respective fields without the dictation of notes in the classroom. It’s a very good platform for both students and faculties to share their innovative ideas and knowledge. Also, the platform helps the faculties to complete their syllabus within the stipulated time. So, I will encourage the faculties to upload quality based notes to share their knowledge among young minds in their respective fields.</p>
+    </div>
+	 </div>
+   </div>
+	 
+	 
+    </div>
+    <div class="carousel-item">
+	<div class="mx-auto">
+<div class="row">
+<div class="col-md-4">
+      <img class="rounded  rounded-circle jo10"	  src="https://lecturenotes.in/uploads/avatars/2/2f/2f3bf5e8cb4884b89748ffa4f18eef17.jpg"class="d-block w-100" alt="...">
+      </div>
+	 <div class="col-md-4">
+
+	 <p class=" m-4 float-left text-wrap" style="width:26rem;">	
+	LectureNotes has helped us increase classroom interaction with the students. It has not only helped me in completing the syllabus on time but also to get recognition among the faculties and students.</p>
+    </div>
+	 </div>
+   </div>
+	</div>
+    <div class="carousel-item">
+    
+	<div class="mx-auto">
+<div class="row">
+<div class="col-md-4">
+      <img class="rounded  rounded-circle jo10"	  src="https://lecturenotes.in/uploads/avatars/a/a0/a06f7039316a73ca7e40dffc302acf3d.jpg"class="d-block w-100" alt="...">
+      </div>
+	 <div class="col-md-4">
+
+	 <p class=" m-4 float-left text-wrap" style="width:26rem;">	
+
+Dictation and teaching cannot be done simultaneously in class. Thanks to LectureNotes, I don't have to dictate notes in the class as I upload them on the website. The faculty community has come together through this platform and we are getting in touch with other faculties and are being able to help each other.      </p>   
+	  </div>
+	 </div>
+   </div>
+	</div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+  
+  
+  
+
+ 
+ <div class="" id="foote">
+   <div class="row m-2 ">
+<div class="col-sm-2"> <a href="">About Us</a> </div>
+<div class="col-sm-2"> <a href="">Careers</a> </div>
+<div class="col-sm-2"> <a href=""> an error</a> </div>
+<div class="col-sm-2"> <p>  </p> </div>
+ <a href=""><img src="https://lecturenotes.in/assets/img/appstore.png"></a>
+
+
+ </div>
+  <div class="row m-2 ">
+<div class="col-sm-2"> <a href="">Contact Us</a> </div>
+<div class="col-sm-2"> <a href="">Disclaimer</a> </div>
+<div class="col-sm-2"> <a href="">privacy policy</a> </div>
+<div class="col-sm-2"> <p>  </p> </div>
+<a href=""><img src="https://lecturenotes.in/assets/img/googleplay.png"></a>
+ </div>
+  <div class="row m-2">
+<div class="col-sm-2"> <a href="">Returns and Cancellation</a> </div>
+<div class="col-sm-2"> <a href="">Terms of Use</a> </div>
+<div class="col-sm-2"> <a href="">Advertise with us</a> </div>
+ </div>
+  <div class="row m-2">
+<div class="col-sm-2"> <a href="">For Faculties</a> </div>
+<div class="col-sm-2"> <a href="">Copyright Policy</a> </div>
+<div class="col-sm-2"> <a href="">Campus Ambassdor</a> </div>
+ </div>
+  <div class="row m-2">
+<div class="col-sm-2"> <a href="">FAQ</a> </div>
+</div>
+
+
+ </div>
+</div>
+ 
+ 
+ 
+ 
+  
+ 
+  
+ 
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
